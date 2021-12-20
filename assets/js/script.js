@@ -12,7 +12,11 @@ $(document).ready(function(){
 
         var hourId = currentBtn.parent().attr('id');
 
+        saveButton.value = localStorage.getItem("task")
+
         localStorage.setItem(hourId, descriptionText);
+
+        document.getElementsByClassName("description").innerHTML = localStorage.getItem("descriptionText");
 
     });
 
